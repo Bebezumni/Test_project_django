@@ -12,9 +12,7 @@
                 {% endthumbnail %}
             </div>
             
-            <a href='{% url 'feed:detail' post.id %}'
             <h5 class="card-title">{{ post.author.username }}</h5>
-            </a>
             <p class="card-text">
                 {{ post.text }}
             </p>
@@ -23,5 +21,6 @@
             </p>
             
         </div>
+        <a href='{% url 'feed:detail' post.id %}' class="btn btn-primary">Read More</a>
     </div>
 </div>
