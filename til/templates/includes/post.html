@@ -5,12 +5,13 @@
 <div class="container">
     <div class="card mb-3 my-5">
         <div class="card-body">
-            
-            <div class="rounded-circle float-end ">
-                {% thumbnail post.author.profile.image "100x100" crop="center" as im %}
-                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="rounded-circle">
-                {% endthumbnail %}
-            </div>
+            <a href="{% url 'profiles:detail' user.username %}">
+                <div class="rounded-circle float-end ">
+                    {% thumbnail post.author.profile.image "100x100" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="rounded-circle">
+                    {% endthumbnail %}
+                </div>
+            </a>
             
             <h5 class="card-title">{{ post.author.username }}</h5>
             <p class="card-text">
